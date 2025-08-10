@@ -1,0 +1,31 @@
+{
+	"schemaVersion": 1,
+	"id": "hotbar-quickswap",
+	"version": "${version}",
+	"name": "Hotbar Quickswap",
+	"description": "A client-side utility mod to quickswap the currently selected hotbar item with the slot above it",
+	"authors": [
+		"Rocky-Stone"
+	],
+	"contact": {
+		"homepage": "",
+		"sources": ""
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/hotbar-quickswap/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"client": [
+			"net.rockystone.HotbarQuickswap"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.17.2",
+		"minecraft": "~1.21.7",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
