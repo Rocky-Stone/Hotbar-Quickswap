@@ -9,6 +9,7 @@ import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.util.InputUtil;
 import net.minecraft.screen.slot.SlotActionType;
+import net.minecraft.util.Identifier;
 import org.lwjgl.glfw.GLFW;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -32,7 +33,8 @@ public class HotbarQuickswap implements ClientModInitializer {
 
 	public void setKeyBindings() {
 		LOGGER.info("setKeyBindings() was called");
-		quickswapKeyBind = KeyBindingHelper.registerKeyBinding(new KeyBinding("key.hotbar-quickswap.config", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_G, "category.hotbar-quickswap.keybindings"));
+        KeyBinding.Category category = KeyBinding.Category.create(Identifier.of("hotbar-quickswap", "keybindings"));
+		quickswapKeyBind = KeyBindingHelper.registerKeyBinding(new KeyBinding("key.hotbar-quickswap.config", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_G, category));
 	}
 
 	public void registerEvents() {
